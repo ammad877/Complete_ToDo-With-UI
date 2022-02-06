@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,157 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #231F34;
+  background: -webkit-linear-gradient(top left, #231F34, #3467BE);
+  background: -moz-linear-gradient(top left, #231F34, #3467BE);
+  background: linear-gradient(to bottom right, #231F34, #3467BE);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.section{
+  position: relative;
+  width: 350px;
+  height: 60vh;
+  background: #fff;
+    box-shadow: 0 0px 20px 2px  #333;
+    border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  animation: topbounce 5s ease-in-out infinite;
+}
+
+@keyframes topbounce {
+  0%,100%{
+      transform: translateY(0);
+  }
+  50%{
+      transform: translateY(10px);   
+  }
+}
+
+.main{
+  margin-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #333;
+}
+
+.input{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.input input{
+  position: relative;
+  background: transparent;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  height: 3vh;
+  color: #000;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #149F65;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input input::placeholder{
+  color: #333;
+}
+
+.input span{
+  align-items: center;
+}
+
+.input span .icons{
+  position: absolute;
+  cursor: pointer;
+  bottom: -30px;
+  left: 170px;
+  margin-top: 10px;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #149F65;
+  color: #fff;
+  font-size: 35px;
+  border-radius: 50%;
+  transition: .3s ease;
+}
+
+.input span .icons:hover{
+  font-size: 40px;
+  background: #fff;
+  color: #149F65;
+}
+
+.list{
+  margin-top: 20px;
+  overflow: auto;
+}
+
+.list ol{
+  list-style: none;
+}
+
+.list ol li{
+  height: 60px;
+  font-size: 22px;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px 10px;
+  color: #000;
+}
+
+.todo_style{
+  display: flex;
+}
+
+.todo_style span{
+  position: relative;
+  align-items: center;
+  font-size: 30px;
+}
+
+.todo_style span .del_icons{
+  position: relative;
+  cursor: pointer;
+  padding: 8px 10px;
+  text-align: center;
+  background-color: #149F65;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: .3s ease;
+}
+
+.todo_style span .del_icons:hover{
+  background: red;
+  color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  section{
+    position: relative;
+    width: 300px;
+    height: 0vh;
+  }
+}
+
+
